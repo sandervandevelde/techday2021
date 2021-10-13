@@ -26,3 +26,8 @@ You an alter the 'target' as needed
 
 This application loops. After running through all the lines, it just starts again.
 
+## Sample outcome
+
+This is a sample of the Time Series Insights where you can see the real time simulation loops through the incoming lines:
+
+![image](https://user-images.githubusercontent.com/694737/137129971-9d008a29-e30a-4fd3-a2b2-ce7c75590236.png)
