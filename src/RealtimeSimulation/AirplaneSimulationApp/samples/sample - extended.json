@@ -1,0 +1,26 @@
+{
+    "body": {
+      "Timestamp": 1633350310,
+      "UTC": "2021-10-04T14:25:10+02:00",
+      "Callsign": "BAW874",
+      "Latitude": 50.294266,
+      "Longitude": 7.892954,
+      "Altitude": 34950,
+      "Speed": 459,
+      "Direction": 104
+    },
+    "enqueuedTime": "Wed Oct 13 2021 12:45:53 GMT+0200 (Central European Summer Time)",
+    "properties": {
+      "messagetype": "simulation"
+    },
+    "systemProperties": {
+      "iothub-connection-device-id": "airplain42",
+      "iothub-connection-auth-method": "{\"scope\":\"device\",\"type\":\"sas\",\"issuer\":\"iothub\",\"acceptingIpFilterRule\":null}",
+      "iothub-connection-auth-generation-id": "637696737210749765",
+      "iothub-enqueuedtime": 1634121953807,
+      "iothub-message-source": "Telemetry",
+      "x-opt-sequence-number": 176,
+      "x-opt-offset": "100288",
+      "x-opt-enqueued-time": 1634121953805
+    }
+  }
