@@ -12,8 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="BA874_29622329.csv">
+    <None Update="BA874-v2.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="BA874_29622329-v1.csv">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 
