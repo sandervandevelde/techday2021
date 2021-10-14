@@ -49,10 +49,20 @@ Registration:
 
 ### TimeSeries Insights
 
-MS Learn:
-    https://docs.microsoft.com/en-us/learn/modules/explore-analyze-time-series-insights/
-
 IoT Show:
     https://channel9.msdn.com/Shows/Internet-of-Things-Show/Using-Azure-Time-Series-Insights-to-create-an-Industrial-IoT-analytics-platform
+
+Azure Time Series Insights Gen2 Environment Provisioning:
+    https://www.youtube.com/watch?v=E1KYPSbL2-s&t=2s
+
+Deep dive:
+    https://www.youtube.com/watch?v=dy2Hv_LVowg
+
+AZ220 Workshop:
+    https://www.youtube.com/watch?v=XaDQJa-JcdI
+
+
+MS Learn:
+    https://docs.microsoft.com/en-us/learn/modules/explore-analyze-time-series-insights/
 
     

@@ -63,6 +63,8 @@ namespace AirplaneSimulationApp
 
                     // send
 
+                    measurement.DateTimeUtc = DateTime.UtcNow;
+
                     string jsonData = JsonConvert.SerializeObject(measurement);
 
                     using var message = new Message(Encoding.UTF8.GetBytes(jsonData));
