@@ -83,7 +83,11 @@ namespace AirplaneSimulationApp
                     await Task.Delay(100);
                 }
 
-                Console.WriteLine($"Loop reset.");
+                Console.WriteLine($"Loop reset. (waiting ten minutes before next flight)");
+
+                await Task.Delay(600000);
+
+                Console.WriteLine($"Starting next flight");
 
                 firstLine = true;
 
@@ -108,23 +112,24 @@ namespace AirplaneSimulationApp
 
             // Callsign,Date,Time,Position,Latitude,Longditude,Altitude,V/S FPM,Seconds Last report,Speed,Direction,OutSide Air Temp,Wind Direction,Wind Speed
 
-            measurement.Callsign = values[0];
+            measurement.Callsign = values[0];  // 0
 
             var dateParts = values[1].Split('/');
 
             var dateTimeString = $"{dateParts[2]}-{dateParts[1]}-{dateParts[0]}T{values[2]}Z";
 
-            measurement.DateTimeUtc = Convert.ToDateTime(dateTimeString);
-            measurement.Position = values[3];
-            measurement.Latitude = Convert.ToDouble(values[4]);
-            measurement.Longitude = Convert.ToDouble(values[5]);
-            measurement.Altitude = Convert.ToInt32(values[6]);
-            measurement.VSFPM = Convert.ToInt32(values[7]);
-            measurement.SecondsLastReport = Convert.ToInt32(values[8]);
-            measurement.Speed = Convert.ToInt32(values[9]);
-            measurement.Direction = Convert.ToInt32(values[10]);
-            measurement.WindDirection = Convert.ToDouble(values[11]);
-            measurement.WindSpeed = Convert.ToInt32(values[12]);
+            measurement.DateTimeUtc = Convert.ToDateTime(dateTimeString);  // 1 + 2
+            measurement.Position = values[3];  //3
+            measurement.Latitude = Convert.ToDouble(values[4]); // 4
+            measurement.Longitude = Convert.ToDouble(values[5]); // 5
+            measurement.Altitude = Convert.ToInt32(values[6]);  //6
+            measurement.VSFPM = Convert.ToInt32(values[7]);  // 7
+            measurement.SecondsLastReport = Convert.ToInt32(values[8]);  // 8
+            measurement.Speed = Convert.ToInt32(values[9]); // 9
+            measurement.Direction = Convert.ToInt32(values[10]); // 10
+            measurement.OutsideAirTemp = Convert.ToDouble(values[11]); // 11
+            measurement.WindDirection = Convert.ToDouble(values[12]); // 12
+            measurement.WindSpeed = Convert.ToInt32(values[13]); // 13
 
             return measurement;
         }
@@ -145,7 +150,7 @@ namespace AirplaneSimulationApp
         public int SecondsLastReport { get; set; }
         public int Speed { get; set; }
         public int Direction { get; set; }
-        public int OutsideAirTemp { get; set; }
+        public double OutsideAirTemp { get; set; }
         public double WindDirection { get; set; }
         public int WindSpeed { get; set; }
     }
