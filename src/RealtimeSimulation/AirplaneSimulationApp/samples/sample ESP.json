@@ -1,0 +1,20 @@
+{
+    "body": {
+      "messageId": 239,
+      "deviceId": "Raspberry Pi Flight Simulator",
+      "callSign": "AAW874",
+      "date": "04/10/2021",
+      "time": "13:24:32",
+      "latitude": "47.910645",
+      "longitude": "18.513885",
+      "altitude": "10200",
+      "vSFPM": "-1800",
+      "secondsLastReport": "15",
+      "speed": "347",
+      "direction": "134",
+      "outsideAirTemp": "-5.4",
+      "windDirection": "360",
+      "windSpeed": "45"
+    },
+    "enqueuedTime": "Thu Oct 14 2021 19:30:08 GMT+0100 (British Summer Time)"
+  }
