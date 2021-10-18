@@ -40,6 +40,32 @@ This is a sample of the Time Series Insights where you can see the real time sim
 
 ![image](https://user-images.githubusercontent.com/694737/137129971-9d008a29-e30a-4fd3-a2b2-ce7c75590236.png)
 
+## Setup Cloud services
+
+These setting are TSI related.
+
+### IoT Hub
+
+Add a consumer group 'tsi' to the IoT Hub. 
+
+### TSI
+
+use same region as ioT HUb.
+
+Use Gen2 datalake. 
+
+Enable Gen2 Hierarchial namespace
+
+7 days hot storage is ok
+
+Add Time Series ID Properties: iothub-connection-device-id, dt-subject
+
+Linked event source: IoT Hub; Policy: ServiceConnect; consumer group 'tsi'
+
+Add copy of the incoming message as type
+
+Add AltitudeKM : Numeric, custom: $event.Altitude.Long * 0.3048 / 1000
+
 ## Links
 
 ## Tech Days 2021 Event

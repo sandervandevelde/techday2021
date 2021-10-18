@@ -1,0 +1,7 @@
+
+Q1 Why are there no 'string' variables by default in a Type? I understand strings are hard to show in a chart but now the string values in an incomming message are all lost? Or are these just hidden added by default?
+
+Q2 What is the maximum number of instances in TSI? Is this number on par with the number of devices an IoT Hub supports?
+
+Q3 Are calculated fields (like Numeric custom value) also saved in the datalake? So the calculated fields are available for 3rd tooling connecting to the datalake?
+
