@@ -66,6 +66,28 @@ Add copy of the incoming message as type
 
 Add AltitudeKM : Numeric, custom: $event.Altitude.Long * 0.3048 / 1000
 
+
+Add State:
+    iff($event.Speed.Long >= 5.0 ,
+      iff($event.Speed.Long > 80.0, 'F', 'T')
+      , 'P')
+    FLy T Orange
+    Taxi T Yellow
+    Park P Green
+    Default P GREEN
+    Advanced: 
+    No interpolation
+    Filter: 
+        $event.Speed.Long != null
+
+
+AvgOutsideTemperature | Aggregate | Custom | avg($event.OutsideAirTemp.Double)
+
+Hierarchy toevoegen Continent | CountryStart
+
+initial version: no relationship with hierarchy or type 
+
+
 ## Links
 
 ## Tech Days 2021 Event
