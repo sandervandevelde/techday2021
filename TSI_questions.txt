@@ -1,0 +1,62 @@
+
+Q1 Why are there no 'string' variables by default in a Type? I understand strings are hard to show in a chart but now the string values in an incomming message are all lost? Or are these just hidden added by default?
+
+Q2 What is the maximum number of instances in TSI? Is this number on par with the number of devices an IoT Hub supports?
+
+Q3 Are calculated fields (like Numeric custom value) also saved in the datalake? So the calculated fields are available for 3rd tooling connecting to the datalake?
+
+Q4: Dialoog voor Categorial is onhandig.
+    Schermpje is te klein
+    wijzigen custom (iif), dan springt Kind direct naar integer ipv. de string
+    Bij saven, worden alle values op NaN gezet. Waarden kwijt
+    Uitleg is ronduit cryptisch. Trail and error nodig om dit in te voeren
+
+    This does not work:
+
+        iff($event.WindDirection.Long > 22.5,
+                iff($event.WindDirection.Long > 67.5, 
+                    iff($event.WindDirection.Long > 112.5,
+                        iff($event.WindDirection.Long > 157.5,
+                            iff($event.WindDirection.Long > 202.5,
+                                iff($event.WindDirection.Long > 247.5,
+                                    iff($event.WindDirection.Long > 292.5,
+                                        iff($event.WindDirection.Long > 337,5,
+                                            'N',
+                                            'NW'),
+                                        'W'),
+                                    'SW'),
+                                'S'),
+                            'SE'),
+                        'E'), 
+                    'NE'),
+                'N2')
+
+
+Q4a: categorical - supports ranges?
+
+Q5: in de deepdive video, timeshift is shown (ts 28:21). How is this done in the current explorer?
+A5: See custom settings for swimming lane.(make a copy)
+
+Q6: Roadmap - TSI on the edge? private preview?
+
+Q7: aggregations. AVG What is the time interval for the avg?
+A7: related to interval selected in Uitleg
+
+Q8: iot hub source: policy, is Service voldoende ipv. iothubowner?
+A8: Yes, as documented serviceconnect permission only. in https://docs.microsoft.com/en-us/azure/time-series-insights/concepts-streaming-ingestion-event-sources#streaming-ingestion-best-practices
+
+Q9: wat als er twee verschillende berichten van een zelfde device (device module, device edge module, etc.) binnen komt?
+
+Q10: warm and cold storage: is warm data already available in cold storage or do we have to wait until it's not warm anymore?
+A10: yes. "When an event is ingested, it is indexed in both warm store(if enabled) and cold store ... up to 5 minutes lag"
+
+Q11: DOCS Update current regions: Australia East, Australia Southeast, Canada Central, Central US, East Asia, East US, East US 2, France Central, North Europe, South Central US, Southeast Asia, UK South, UK West, West Europe, West US, West US 2
+
+Q12:DOCS accellerator link werkt niet meer? (... Tutorial: Set up an Azure Time Series Insights Gen2 environment)
+
+Q13: Gen2 hierarchical namespace is not enable in each demo. Does the hierarchical namespace provide a better performance? What are the drawbacks
+
+
+
+
+
