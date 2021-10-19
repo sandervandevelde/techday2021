@@ -56,7 +56,7 @@ Q12:DOCS accellerator link werkt niet meer? (... Tutorial: Set up an Azure Time 
 
 Q13: Gen2 hierarchical namespace is not enable in each demo. Does the hierarchical namespace provide a better performance? What are the drawbacks
 
-
+@14: relationship between TSI and Azure Data Explorer
 
 
 
