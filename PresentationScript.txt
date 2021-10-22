@@ -1,0 +1,28 @@
+Prerequisites
+=============
+
+two tabs open in explorer
+
+Azure portal access in browser
+Resourcegroup is selected
+
+TSI is already created (Time Series ID for partitioning: iothub-connection-device-id, dt-subject)
+
+TSI Explorer access in separate browser tab
+
+Telemetry is arriving
+
+IoT Hub is already connected to the as an Event Source 
+
+TSI has already the model
+TSI has already the hierarchy
+
+Device is still bound to DefaultType
+Device is not  bound to any hierarchy
+Device has no instance fields
+
+Azure portal tab is shown first
+
+STEPS
+=====
+
