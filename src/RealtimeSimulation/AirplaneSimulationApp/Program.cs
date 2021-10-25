@@ -73,7 +73,8 @@ namespace AirplaneSimulationApp
                     message.ContentEncoding = "utf-8";
                     message.ContentType = "application/json";
 
-                    message.Properties.Add("messagetype", "simulation");
+                    message.Properties.Add("messageType", "simulation");
+                    message.Properties.Add("messageCount", i.ToString());
 
                     await client.SendEventAsync(message);
 
