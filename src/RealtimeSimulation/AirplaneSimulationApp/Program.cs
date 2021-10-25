@@ -4,6 +4,7 @@ using System;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace AirplaneSimulationApp
 {
@@ -11,7 +12,7 @@ namespace AirplaneSimulationApp
     {
         private static async Task Main(string[] args)
         {
-            Console.WriteLine("BA874 Fligh simulation!");
+            Console.WriteLine("AAW874 Fligh simulation!");
 
             var connectionString = Environment.GetEnvironmentVariable("AzureIoTDeviceConnectionString", EnvironmentVariableTarget.User);
 
@@ -19,7 +20,7 @@ namespace AirplaneSimulationApp
 
             while (true)
             {
-                var csvLines = File.ReadAllLines("BA874-v2.csv");
+                var csvLines = File.ReadAllLines("AAW874-v2.csv");
 
                 var firstLine = true;
 
@@ -108,6 +109,10 @@ namespace AirplaneSimulationApp
                 return null;
             }
 
+            var provider = new NumberFormatInfo();
+            provider.NumberDecimalSeparator = ".";
+            provider.NumberGroupSeparator = ",";
+
             var measurement = new Measurement();
 
             var values = csvLine.Split(',');
@@ -122,15 +127,15 @@ namespace AirplaneSimulationApp
 
             measurement.DateTimeUtc = Convert.ToDateTime(dateTimeString);  // 1 + 2
             measurement.Position = values[3];  //3
-            measurement.Latitude = Convert.ToDouble(values[4]); // 4
-            measurement.Longitude = Convert.ToDouble(values[5]); // 5
+            measurement.Latitude = Convert.ToDouble(values[4], provider); // 4
+            measurement.Longitude = Convert.ToDouble(values[5], provider); // 5
             measurement.Altitude = Convert.ToInt32(values[6]);  //6
             measurement.VSFPM = Convert.ToInt32(values[7]);  // 7
             measurement.SecondsLastReport = Convert.ToInt32(values[8]);  // 8
             measurement.Speed = Convert.ToInt32(values[9]); // 9
             measurement.Direction = Convert.ToInt32(values[10]); // 10
-            measurement.OutsideAirTemp = Convert.ToDouble(values[11]); // 11
-            measurement.WindDirection = Convert.ToDouble(values[12]); // 12
+            measurement.OutsideAirTemp = Convert.ToDouble(values[11], provider); // 11  
+            measurement.WindDirection = Convert.ToDouble(values[12], provider); // 12
             measurement.WindSpeed = Convert.ToInt32(values[13]); // 13
 
             return measurement;

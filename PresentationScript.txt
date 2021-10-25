@@ -1,28 +1,184 @@
 Prerequisites
 =============
 
-two tabs open in explorer
-
-Azure portal access in browser
-Resourcegroup is selected
-
 TSI is already created (Time Series ID for partitioning: iothub-connection-device-id, dt-subject)
-
-TSI Explorer access in separate browser tab
 
 Telemetry is arriving
 
-IoT Hub is already connected to the as an Event Source 
+two tabs open in explorer
+Azure portal access - IoT Hub - in browser, IoT Hub is selected
+TSI Explorer access in separate browser tab
+
+
+IoT Hub is already connected to TSI as an Event Source
+TSI has separate consumer group
 
 TSI has already the model
 TSI has already the hierarchy
 
 Device is still bound to DefaultType
-Device is not  bound to any hierarchy
+Device is not yet bound to any hierarchy
 Device has no instance fields
 
-Azure portal tab is shown first
+Azure portal tab - IoT Hub -  is shown first 
 
 STEPS
 =====
+
+Show graph/count of incoming messages in IoT Hub
+
+Show Consumer group voor TSI is created
+
+Show resource group. TSI is available
+
+Show how an TSI is created:
+- storage selection 
+- Time Series ID Property
+- event source selection
+
+cancel creation of net TSI
+
+Open existing TSI:
+-Show telemetry is incoming in graph
+-Show we have an event source.
+-Show the timestamp of the event source
+-Show Storage configuration
+-Show warm store vs. cold store
+-Show the Time Series ID Property: iothub-connection-device-id, dt-subject (For partitioning of the incoming messages)
+
+--
+
+Show button to TSI explorer
+
+open TSI explorer
+
+--
+
+See the bar at the top with incoming messages representation
+
+see device list to the left. just one device here. This can be a long list of devices.
+
+show list of properties from the incoming messages 
+
+including eventcount 
+
+if only eventcount is shown, just wait a moment unit the telemetry properties are flattened.
+
+add speed and altitude AS line chart
+
+show we have 4 swimming lanes. show we can combine them 
+
+select a region
+
+select statistics
+
+select zoom
+
+add a marker
+
+remove a marker
+
+more action: show data as chart
+
+more action: powerbi export
+
+more action: explore raw events
+
+line chart. over to scatter plot. We see no strange outliers. so telemerty seems ok
+
+back to line chart
+
+hide speed
+
+Duplicate altitude
+
+give it another color
+
+give it a timeshift: Offset of +10 minutes (advanced) 
+
+--
+
+Let's fix that long list of devices. Let's group it
+
+--
+
+go to model page
+
+show hierarchy tab
+
+regional -> Continent -> CountryStart
+
+go to instances tab
+
+edit current device
+
+better name
+
+add hierarchy via Instance Field tab
+
+Regional + Europe + UK
+
+save
+
+Go to Analyze page
+
+Show the Hierarchy usage
+
+--
+
+What about those raw values, can we do more with the same data?
+
+--
+
+go to model page
+
+show types tab
+
+DefaultType is default available
+
+FlightData was created by hand
+
+see the three extra field 
+
+AltitudeKM is a calculation
+
+Stage is an example which adds categories
+
+average is an aggregation
+
+assign this type to the instance
+
+save
+
+--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
