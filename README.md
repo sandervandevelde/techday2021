@@ -66,7 +66,6 @@ Add copy of the incoming message as type
 
 Add AltitudeKM : Numeric, custom: $event.Altitude.Long * 0.3048 / 1000
 
-
 Add State:
     iff($event.Speed.Long >= 5.0 ,
       iff($event.Speed.Long > 80.0, 'F', 'T')
@@ -81,7 +80,7 @@ Add State:
         $event.Speed.Long != null
 
 
-AvgOutsideTemperature | Aggregate | Custom | avg($event.OutsideAirTemp.Double)
+AvgOutsideTemperature | Aggregate | Custom | avg($event.OutsideAirTemp.Double) | $event.OutsideAirTemp.Double != 0
 
 Hierarchy toevoegen Continent | CountryStart
 
