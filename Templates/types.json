@@ -1,0 +1,183 @@
+{
+  "put": [
+    {
+      "id": "1be09af9-f089-4d6b-9f0b-48018b5f7393",
+      "name": "DefaultType",
+      "description": "Default type",
+      "variables": {
+        "EventCount": {
+          "kind": "aggregate",
+          "aggregation": {
+            "tsx": "count()"
+          }
+        }
+      }
+    },
+    {
+      "id": "5019eb34-d383-4216-ae7c-de7bd595a51d",
+      "name": "FlightData",
+      "description": "Flight data",
+      "variables": {
+        "Direction": {
+          "kind": "numeric",
+          "value": {
+            "tsx": "$event.Direction.Long"
+          },
+          "aggregation": {
+            "tsx": "avg($value)"
+          }
+        },
+        "Altitude": {
+          "kind": "numeric",
+          "value": {
+            "tsx": "$event.Altitude.Long"
+          },
+          "aggregation": {
+            "tsx": "avg($value)"
+          }
+        },
+        "Latitude": {
+          "kind": "numeric",
+          "value": {
+            "tsx": "$event.Latitude.Double"
+          },
+          "aggregation": {
+            "tsx": "avg($value)"
+          }
+        },
+        "Longitude": {
+          "kind": "numeric",
+          "value": {
+            "tsx": "$event.Longitude.Double"
+          },
+          "aggregation": {
+            "tsx": "avg($value)"
+          }
+        },
+        "OutsideAirTemp": {
+          "kind": "numeric",
+          "value": {
+            "tsx": "$event.OutsideAirTemp.Double"
+          },
+          "aggregation": {
+            "tsx": "avg($value)"
+          }
+        },
+        "SecondsLastReport": {
+          "kind": "numeric",
+          "value": {
+            "tsx": "$event.SecondsLastReport.Long"
+          },
+          "aggregation": {
+            "tsx": "avg($value)"
+          }
+        },
+        "Speed": {
+          "kind": "numeric",
+          "value": {
+            "tsx": "$event.Speed.Long"
+          },
+          "aggregation": {
+            "tsx": "avg($value)"
+          }
+        },
+        "VSFPM": {
+          "kind": "numeric",
+          "value": {
+            "tsx": "$event.VSFPM.Long"
+          },
+          "aggregation": {
+            "tsx": "avg($value)"
+          }
+        },
+        "WindDirection": {
+          "kind": "numeric",
+          "value": {
+            "tsx": "$event.WindDirection.Double"
+          },
+          "aggregation": {
+            "tsx": "avg($value)"
+          }
+        },
+        "WindSpeed": {
+          "kind": "numeric",
+          "value": {
+            "tsx": "$event.WindSpeed.Long"
+          },
+          "aggregation": {
+            "tsx": "avg($value)"
+          }
+        },
+        "AltitudeKM": {
+          "kind": "numeric",
+          "value": {
+            "tsx": "$event['Altitude'].Long * 0.3048 / 1000"
+          },
+          "aggregation": {
+            "tsx": "avg($value)"
+          }
+        },
+        "Stage": {
+          "kind": "categorical",
+          "value": {
+            "tsx": "iff($event.Speed.Long >= 5.0 ,\n  iff($event.Speed.Long > 80.0, 'F', 'T')\n, 'P')"
+          },
+          "filter": {
+            "tsx": "$event.Speed.Long != null"
+          },
+          "categories": [
+            {
+              "label": "Flying",
+              "values": [
+                "F"
+              ],
+              "annotations": {
+                "color": "#FF8C00"
+              }
+            },
+            {
+              "label": "Taxis",
+              "values": [
+                "T"
+              ],
+              "annotations": {
+                "color": "#FFF100"
+              }
+            },
+            {
+              "label": "Parked",
+              "values": [
+                "P"
+              ],
+              "annotations": {
+                "color": "#008272"
+              }
+            }
+          ],
+          "defaultCategory": {
+            "label": "P",
+            "annotations": {}
+          }
+        },
+        "OutsideAirTempAvg": {
+          "kind": "aggregate",
+          "filter": {
+            "tsx": "$event.OutsideAirTemp.Double != 0"
+          },
+          "aggregation": {
+            "tsx": "avg($event.OutsideAirTemp.Double)"
+          }
+        },
+        "OutsideAirTempFarenheit": {
+          "kind": "numeric",
+          "value": {
+            "tsx": "($event['OutsideAirTemp'].Double * 9/5) + 32"
+          },
+          "aggregation": {
+            "tsx": "avg($value)"
+          }
+        }
+      }
+    }
+  ]
+}

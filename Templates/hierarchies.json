@@ -1,0 +1,14 @@
+{
+  "put": [
+    {
+      "id": "3ce1961f-29cd-4d30-8a29-f23cf8e2ac87",
+      "name": "Regional",
+      "source": {
+        "instanceFieldNames": [
+          "Continent",
+          "CountryStart"
+        ]
+      }
+    }
+  ]
+}
