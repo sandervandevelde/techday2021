@@ -18,6 +18,8 @@ namespace AirplaneSimulationApp
 
             using var client = DeviceClient.CreateFromConnectionString(connectionString);
 
+            var deviceId = "AAW874";  // HARDCODED
+
             while (true)
             {
                 var csvLines = File.ReadAllLines("AAW874-v2.csv");
@@ -38,13 +40,13 @@ namespace AirplaneSimulationApp
                         continue;
                     }
 
-                    var measurement = ConvertToMeasurement(csvLine);
+                    var measurement = ConvertToMeasurement(csvLine, deviceId);
 
                     // stall as in realtime
 
                     if (previousMessageUTC != DateTime.MinValue)
                     {
-                        var timeSpanToWait = measurement.DateTimeUtc - previousMessageUTC;
+                        var timeSpanToWait = measurement.dateTimeUtc - previousMessageUTC;
 
                         Console.Write($"Sending next message in {timeSpanToWait.TotalSeconds} seconds");
 
@@ -60,11 +62,11 @@ namespace AirplaneSimulationApp
                         Console.WriteLine();
                     }
 
-                    previousMessageUTC = measurement.DateTimeUtc;
+                    previousMessageUTC = measurement.dateTimeUtc;
 
                     // send
 
-                    measurement.DateTimeUtc = DateTime.UtcNow;
+                    measurement.dateTimeUtc = DateTime.UtcNow;
 
                     string jsonData = JsonConvert.SerializeObject(measurement);
 
@@ -103,7 +105,9 @@ namespace AirplaneSimulationApp
             }
         }
 
-        private static Measurement ConvertToMeasurement(string csvLine)
+        private static int _messageId = 0;
+
+        private static Measurement ConvertToMeasurement(string csvLine, string deviceId)
         {
             if (string.IsNullOrEmpty(csvLine))
             {
@@ -120,24 +124,32 @@ namespace AirplaneSimulationApp
 
             // Callsign,Date,Time,Position,Latitude,Longditude,Altitude,V/S FPM,Seconds Last report,Speed,Direction,OutSide Air Temp,Wind Direction,Wind Speed
 
-            measurement.Callsign = values[0];  // 0
+            _messageId++;
+            measurement.messageId = _messageId;
+
+            measurement.deviceId = deviceId;
+
+            measurement.callsign = values[0];  // 0
 
             var dateParts = values[1].Split('/');
 
             var dateTimeString = $"{dateParts[2]}-{dateParts[1]}-{dateParts[0]}T{values[2]}Z";
 
-            measurement.DateTimeUtc = Convert.ToDateTime(dateTimeString);  // 1 + 2
+            measurement.date = values[1];
+            measurement.time = values[2];
+
+            measurement.dateTimeUtc = Convert.ToDateTime(dateTimeString);  // 1 + 2
             measurement.Position = values[3];  //3
-            measurement.Latitude = Convert.ToDouble(values[4], provider); // 4
-            measurement.Longitude = Convert.ToDouble(values[5], provider); // 5
-            measurement.Altitude = Convert.ToInt32(values[6]);  //6
-            measurement.VSFPM = Convert.ToInt32(values[7]);  // 7
-            measurement.SecondsLastReport = Convert.ToInt32(values[8]);  // 8
-            measurement.Speed = Convert.ToInt32(values[9]); // 9
-            measurement.Direction = Convert.ToInt32(values[10]); // 10
-            measurement.OutsideAirTemp = Convert.ToDouble(values[11], provider); // 11  
-            measurement.WindDirection = Convert.ToDouble(values[12], provider); // 12
-            measurement.WindSpeed = Convert.ToInt32(values[13]); // 13
+            measurement.latitude = Convert.ToDouble(values[4], provider); // 4
+            measurement.longitude = Convert.ToDouble(values[5], provider); // 5
+            measurement.altitude = Convert.ToInt32(values[6]);  //6
+            measurement.vSFPM = Convert.ToInt32(values[7]);  // 7
+            measurement.secondsLastReport = Convert.ToInt32(values[8]);  // 8
+            measurement.speed = Convert.ToInt32(values[9]); // 9
+            measurement.direction = Convert.ToInt32(values[10]); // 10
+            measurement.outsideAirTemp = Convert.ToDouble(values[11], provider); // 11  
+            measurement.windDirection = Convert.ToDouble(values[12], provider); // 12
+            measurement.windSpeed = Convert.ToInt32(values[13]); // 13
 
             return measurement;
         }
@@ -146,20 +158,24 @@ namespace AirplaneSimulationApp
     /// <summary>
     /// Callsign,Date,Time,Position,Latitude,Longditude,Altitude,V/S FPM,Seconds Last report,Speed,Direction,OutSide Air Temp,Wind Direction,Wind Speed
     /// </summary>
-    internal class Measurement
-    {
-        public string Callsign { get; set; }
-        public DateTime DateTimeUtc { get; set; }
-        public string Position { get; set; }
-        public double Latitude { get; set; }
-        public double Longitude { get; set; }
-        public int Altitude { get; set; }
-        public int VSFPM { get; set; }
-        public int SecondsLastReport { get; set; }
-        public int Speed { get; set; }
-        public int Direction { get; set; }
-        public double OutsideAirTemp { get; set; }
-        public double WindDirection { get; set; }
-        public int WindSpeed { get; set; }
-    }
+internal class Measurement
+{
+    public int messageId {get;set;}
+    public string deviceId {get;set;}
+    public string callsign { get; set; }
+    public string date { get; set; }
+    public string time { get; set; }
+    public DateTime dateTimeUtc { get; set; }
+    public string Position { get; set; }
+    public double latitude { get; set; }
+    public double longitude { get; set; }
+    public int altitude { get; set; }
+    public int vSFPM { get; set; }
+    public int secondsLastReport { get; set; }
+    public int speed { get; set; }
+    public int direction { get; set; }
+    public double outsideAirTemp { get; set; }
+    public double windDirection { get; set; }
+    public int windSpeed { get; set; }
+}
 }

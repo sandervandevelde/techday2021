@@ -21,7 +21,7 @@
         "Direction": {
           "kind": "numeric",
           "value": {
-            "tsx": "$event.Direction.Long"
+            "tsx": "$event.direction.Long"
           },
           "aggregation": {
             "tsx": "avg($value)"
@@ -30,7 +30,7 @@
         "Altitude": {
           "kind": "numeric",
           "value": {
-            "tsx": "$event.Altitude.Long"
+            "tsx": "$event.altitude.Long"
           },
           "aggregation": {
             "tsx": "avg($value)"
@@ -39,7 +39,7 @@
         "Latitude": {
           "kind": "numeric",
           "value": {
-            "tsx": "$event.Latitude.Double"
+            "tsx": "$event.latitude.Double"
           },
           "aggregation": {
             "tsx": "avg($value)"
@@ -48,7 +48,7 @@
         "Longitude": {
           "kind": "numeric",
           "value": {
-            "tsx": "$event.Longitude.Double"
+            "tsx": "$event.longitude.Double"
           },
           "aggregation": {
             "tsx": "avg($value)"
@@ -57,7 +57,7 @@
         "OutsideAirTemp": {
           "kind": "numeric",
           "value": {
-            "tsx": "$event.OutsideAirTemp.Double"
+            "tsx": "$event.outsideAirTemp.Double"
           },
           "aggregation": {
             "tsx": "avg($value)"
@@ -66,7 +66,7 @@
         "SecondsLastReport": {
           "kind": "numeric",
           "value": {
-            "tsx": "$event.SecondsLastReport.Long"
+            "tsx": "$event.secondsLastReport.Long"
           },
           "aggregation": {
             "tsx": "avg($value)"
@@ -75,7 +75,7 @@
         "Speed": {
           "kind": "numeric",
           "value": {
-            "tsx": "$event.Speed.Long"
+            "tsx": "$event.speed.Long"
           },
           "aggregation": {
             "tsx": "avg($value)"
@@ -84,7 +84,7 @@
         "VSFPM": {
           "kind": "numeric",
           "value": {
-            "tsx": "$event.VSFPM.Long"
+            "tsx": "$event.vSFPM.Long"
           },
           "aggregation": {
             "tsx": "avg($value)"
@@ -93,7 +93,7 @@
         "WindDirection": {
           "kind": "numeric",
           "value": {
-            "tsx": "$event.WindDirection.Double"
+            "tsx": "$event.windDirection.Double"
           },
           "aggregation": {
             "tsx": "avg($value)"
@@ -102,7 +102,7 @@
         "WindSpeed": {
           "kind": "numeric",
           "value": {
-            "tsx": "$event.WindSpeed.Long"
+            "tsx": "$event.windSpeed.Long"
           },
           "aggregation": {
             "tsx": "avg($value)"
@@ -111,7 +111,7 @@
         "AltitudeKM": {
           "kind": "numeric",
           "value": {
-            "tsx": "$event['Altitude'].Long * 0.3048 / 1000"
+            "tsx": "$event['altitude'].Long * 0.3048 / 1000"
           },
           "aggregation": {
             "tsx": "avg($value)"
@@ -120,10 +120,10 @@
         "Stage": {
           "kind": "categorical",
           "value": {
-            "tsx": "iff($event.Speed.Long >= 5.0 ,\n  iff($event.Speed.Long > 80.0, 'F', 'T')\n, 'P')"
+            "tsx": "iff($event.speed.Long >= 5.0 ,\n  iff($event.speed.Long > 80.0, 'F', 'T')\n, 'P')"
           },
           "filter": {
-            "tsx": "$event.Speed.Long != null"
+            "tsx": "$event.speed.Long != null"
           },
           "categories": [
             {
@@ -162,16 +162,16 @@
         "OutsideAirTempAvg": {
           "kind": "aggregate",
           "filter": {
-            "tsx": "$event.OutsideAirTemp.Double != 0"
+            "tsx": "$event.outsideAirTemp.Double != 0"
           },
           "aggregation": {
-            "tsx": "avg($event.OutsideAirTemp.Double)"
+            "tsx": "avg($event.outsideAirTemp.Double)"
           }
         },
         "OutsideAirTempFarenheit": {
           "kind": "numeric",
           "value": {
-            "tsx": "($event['OutsideAirTemp'].Double * 9/5) + 32"
+            "tsx": "($event['outsideAirTemp'].Double * 9/5) + 32"
           },
           "aggregation": {
             "tsx": "avg($value)"
