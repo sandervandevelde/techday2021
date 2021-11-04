@@ -139,7 +139,7 @@ namespace AirplaneSimulationApp
             measurement.time = values[2];
 
             measurement.dateTimeUtc = Convert.ToDateTime(dateTimeString);  // 1 + 2
-            measurement.Position = values[3];  //3
+            measurement.position = values[3];  //3
             measurement.latitude = Convert.ToDouble(values[4], provider); // 4
             measurement.longitude = Convert.ToDouble(values[5], provider); // 5
             measurement.altitude = Convert.ToInt32(values[6]);  //6
@@ -166,7 +166,7 @@ internal class Measurement
     public string date { get; set; }
     public string time { get; set; }
     public DateTime dateTimeUtc { get; set; }
-    public string Position { get; set; }
+    public string position { get; set; }
     public double latitude { get; set; }
     public double longitude { get; set; }
     public int altitude { get; set; }

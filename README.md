@@ -44,6 +44,15 @@ This is a sample of the Time Series Insights where you can see the real time sim
 
 These setting are TSI related.
 
+### REsource names
+
+- TechDays2021-neu-tsi
+- iothub-connection-device-id, dt-subject
+- IoTHubSource
+- techdays2021neutsistor
+
+
+
 ### IoT Hub
 
 Add a consumer group 'tsi' to the IoT Hub. 
