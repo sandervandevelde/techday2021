@@ -56,6 +56,7 @@ These setting are TSI related.
 ### IoT Hub
 
 Add a consumer group 'tsi' to the IoT Hub. 
+Make sure all telemetry is routed to default endpoint.
 
 ### TSI
 
