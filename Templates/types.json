@@ -159,7 +159,7 @@
             "annotations": {}
           }
         },
-        "OutsideAirTempAvg": {
+        "OutsideAirAvg": {
           "kind": "aggregate",
           "filter": {
             "tsx": "$event.outsideAirTemp.Double != 0"
@@ -168,7 +168,7 @@
             "tsx": "avg($event.outsideAirTemp.Double)"
           }
         },
-        "OutsideAirTempFarenheit": {
+        "OutsideAirFahrenheit": {
           "kind": "numeric",
           "value": {
             "tsx": "($event['outsideAirTemp'].Double * 9/5) + 32"
