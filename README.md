@@ -51,8 +51,6 @@ These setting are TSI related.
 - IoTHubSource
 - techdays2021neutsistor
 
-
-
 ### IoT Hub
 
 Add a consumer group 'tsi' to the IoT Hub. 
@@ -96,6 +94,10 @@ Hierarchy toevoegen Continent | CountryStart
 
 initial version: no relationship with hierarchy or type 
 
+## Country code
+
+London GB - Heathrow - LHR
+Hungary HU - Budapest - BUD
 
 ## Links
 
