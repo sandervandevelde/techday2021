@@ -1,12 +1,31 @@
 {
   "put": [
     {
-      "id": "3ce1961f-29cd-4d30-8a29-f23cf8e2ac87",
-      "name": "Regional",
+      "id": "0dd7a459-5d41-433b-b0a2-142dfa2564d8",
+      "name": "Airports",
       "source": {
         "instanceFieldNames": [
-          "Continent",
-          "CountryStart"
+          "AirportDeparture",
+          "AirportArrival"
+        ]
+      }
+    },
+    {
+      "id": "3ce1961f-29cd-4d30-8a29-f23cf8e2ac87",
+      "name": "Countries",
+      "source": {
+        "instanceFieldNames": [
+          "CountryStart",
+          "CountryEnd"
+        ]
+      }
+    },
+    {
+      "id": "1514f794-3623-4b33-bd75-38da2a16d552",
+      "name": "Airlines",
+      "source": {
+        "instanceFieldNames": [
+          "Airline"
         ]
       }
     }

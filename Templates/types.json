@@ -1,19 +1,6 @@
 {
   "put": [
     {
-      "id": "1be09af9-f089-4d6b-9f0b-48018b5f7393",
-      "name": "DefaultType",
-      "description": "Default type",
-      "variables": {
-        "EventCount": {
-          "kind": "aggregate",
-          "aggregation": {
-            "tsx": "count()"
-          }
-        }
-      }
-    },
-    {
       "id": "5019eb34-d383-4216-ae7c-de7bd595a51d",
       "name": "FlightData",
       "description": "Flight data",
