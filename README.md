@@ -99,6 +99,8 @@ initial version: no relationship with hierarchy or type
 London GB - Heathrow - LHR
 Hungary HU - Budapest - BUD
 
+AzureAir
+
 ## Links
 
 ## Tech Days 2021 Event

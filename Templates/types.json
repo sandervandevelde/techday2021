@@ -50,10 +50,10 @@
             "tsx": "avg($value)"
           }
         },
-        "SecondsLastReport": {
+        "SecondsNextReport": {
           "kind": "numeric",
           "value": {
-            "tsx": "$event.secondsLastReport.Long"
+            "tsx": "$event.secondsNextReport.Long"
           },
           "aggregation": {
             "tsx": "avg($value)"
