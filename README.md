@@ -48,7 +48,7 @@ These setting are TSI related.
 
 - TechDays2021-neu-tsi
 - iothub-connection-device-id, dt-subject
-- IoTHubSource
+- IoTHubEventSource
 - techdays2021neutsistor
 
 ### IoT Hub
