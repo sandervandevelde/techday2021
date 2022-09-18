@@ -105,6 +105,9 @@ AzureAir
 
 ## Tech Days 2021 Event
 
+Video of the recording:
+    https://www.youtube.com/watch?v=anbdKJC_eqQ
+
 Registration:
     https://mktoevents.com/Microsoft+Event/302272/157-GQE-382
 
