@@ -1,0 +1,28 @@
+{
+    "body": {
+      "messageId": 180,
+      "deviceId": "AAW874",
+      "callsign": "AAW874",
+      "date": "04/10/2021",
+      "time": "12:28:21",
+      "dateTimeUtc": "2022-09-20T12:38:48.3091803Z",
+      "position": "\"50.236847;8.536228\"",
+      "latitude": 50.236847,
+      "longitude": 8.536228,
+      "altitude": 35000,
+      "vSFPM": -24,
+      "secondsLastReport": 63,
+      "speed": 473,
+      "direction": 97,
+      "outsideAirTemp": -55,
+      "windDirection": 355,
+      "windSpeed": 40
+    },
+    "enqueuedTime": "Tue Sep 20 2022 14:38:48 GMT+0200 (Central European Summer Time)",
+    "properties": {
+      "messageType": "simulation",
+      "messageCount": "179"
+    }
+  }
+
+  

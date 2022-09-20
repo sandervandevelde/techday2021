@@ -1,0 +1,27 @@
+{
+    "@id": "dtmi:com:adt:flightintoazure:airliner;1",
+    "@type": "Interface",
+    "displayName": "Airliner - Flight Into Azure - Interface Model",
+    "@context": "dtmi:dtdl:context;2",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "companyName",
+            "description": "Name of company",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "abbreviation",
+            "description": "Abbreviation",
+            "schema": "string"
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:com:adt:flightintoazure:airplane;1",
+            "name": "rel_has_airplanes",
+            "displayName": "Has airplanes",
+            "target": "dtmi:com:adt:flightintoazure:airliner;1"
+        }
+    ]
+}

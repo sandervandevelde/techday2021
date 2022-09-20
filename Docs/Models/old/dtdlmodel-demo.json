@@ -1,0 +1,57 @@
+{
+    "@id": "dtmi:com:adt:alten:demo;1",
+    "@type": "Interface",
+    "displayName": "Alten Demo - Interface Model",
+    "@context": "dtmi:dtdl:context;2",
+    "contents": [
+        {
+            "@type": "Property",
+            "name": "PositieX",
+            "schema": "double",
+            "description": "Last Positie X",
+            "writable": false
+        },
+        {
+            "@type": "Property",
+            "name": "PositieY",
+            "schema": "double",
+            "description": "Last Positie Y",
+            "writable": false
+        },
+        {
+            "@type": "Property",
+            "name": "VelocityX",
+            "schema": "double",
+            "description": "Last velocity X",
+            "writable": false
+        },
+        {
+            "@type": "Property",
+            "name": "VelocityY",
+            "schema": "double",
+            "description": "Last velocity Y",
+            "writable": false
+        },
+        {
+            "@type": "Property",
+            "name": "maxDistanceX",
+            "schema": "double",
+            "description": "Set maximum X distance",
+            "writable": true
+        },
+        {
+            "@type": "Property",
+            "name": "maxDistanceY",
+            "schema": "double",
+            "description": "Set maximum Y distance",
+            "writable": true
+        },
+        {
+            "@type": "Relationship",
+            "@id": "dtmi:com:adt:alten:demo:rel_has_bbrs;1",
+            "name": "rel_has_bbrs",
+            "displayName": "Has BBRs",
+            "target": "dtmi:com:adt:alten:bbr;1"
+        }
+    ]
+}

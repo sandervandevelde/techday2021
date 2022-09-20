@@ -1,0 +1,188 @@
+{
+    "@id": "dtmi:com:adt:alten:bbr;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Alten Ball Balancing Robot - Interface Model",
+    "contents": [
+        {
+            "@type": "Telemetry",
+            "name": "DeviceId",
+            "schema": "string"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "TimeStamp",
+            "schema": "dateTime"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "Tijd",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "PositieX",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "PositieY",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "AngleRoll",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "AnglePitch",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "AngleYaw",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "VelocityX",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "VelocityY",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "AngularVelocityRoll",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "AngularVelocityPitch",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "AngularVelocityYaw",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "OutputTorqueOnBallRollDirection",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "OutputTorqueOnBallPitchDirection",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "OutputTorqueOnBallYawDirection",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "DeviceId",
+            "description": "ID of device",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "TimeStamp",
+            "description": "Timestamp",
+            "schema": "dateTime"
+        },
+        {
+            "@type": "Property",
+            "name": "Tijd",
+            "description": "Relative time",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "PositieX",
+            "schema": "double",
+            "description": "X position",
+            "writable": false
+        },
+        {
+            "@type": "Property",
+            "name": "PositieY",
+            "schema": "double",
+            "description": "Y position",
+            "writable": false
+        },
+        {
+            "@type": "Property",
+            "name": "AngleRoll",
+            "description": "Roll angle",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "AnglePitch",
+            "description": "Pitch angle",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "AngleYaw",
+            "description": "Yaw angle",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "VelocityX",
+            "schema": "double",
+            "description": "X velocity",
+            "writable": false
+        },
+        {
+            "@type": "Property",
+            "name": "VelocityY",
+            "schema": "double",
+            "description": "Y velocity",
+            "writable": false
+        },
+        {
+            "@type": "Property",
+            "name": "AngularVelocityRoll",
+            "description": "Angular velocity roll",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "AngularVelocityPitch",
+            "description": "Angular velocity pitch",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "AngularVelocityYaw",
+            "description": "Angular velocity yaw",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "OutputTorqueOnBallRollDirection",
+            "description": "Output torque on ball roll direction",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "OutputTorqueOnBallPitchDirection",
+            "description": "Output torque on ball pitch direction",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "OutputTorqueOnBallYawDirection",
+            "description": "Output torque on ball yaw direction",
+            "schema": "double"
+        }
+    ]
+}

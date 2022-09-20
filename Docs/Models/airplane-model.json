@@ -1,0 +1,184 @@
+{
+    "@id": "dtmi:com:adt:flightintoazure:airplane;1",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "displayName": "Airplane - Flight Into Azure - Interface Model",
+    "contents": [
+        {
+            "@type": "Telemetry",
+            "name": "deviceId",
+            "schema": "string"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "callsign",
+            "schema": "string"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "date",
+            "schema": "string"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "time",
+            "schema": "string"
+        },        
+        {
+            "@type": "Telemetry",
+            "name": "dateTimeUtc",
+            "schema": "dateTime"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "position",
+            "schema": "string"
+        },        
+        {
+            "@type": "Telemetry",
+            "name": "latitude",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "longitude",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "altitude",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "vSFPM",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "secondsLastReport",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "speed",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "direction",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "outsideAirTemp",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "windDirection",
+            "schema": "double"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "windSpeed",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "deviceId",
+            "description": "ID of device",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "callsign",
+            "description": "Call sign",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "date",
+            "description": "Date",
+            "schema": "string"
+        },
+        {
+            "@type": "Property",
+            "name": "time",
+            "description": "Time",
+            "schema": "string"
+        },        
+        {
+            "@type": "Property",
+            "name": "dateTimeUtc",
+            "description": "Datetime UTC",
+            "schema": "dateTime"
+        },
+        {
+            "@type": "Property",
+            "name": "position",
+            "description": "Position",
+            "schema": "string"
+        },        
+        {
+            "@type": "Property",
+            "name": "latitude",
+            "description": "Latitude",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "longitude",
+            "description": "Longitude",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "altitude",
+            "description": "Altitude",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "vSFPM",
+            "description": "Vertical speed in feet per minute",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "secondsLastReport",
+            "description": "Seconds to last report",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "speed",
+            "description": "Speed",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "direction",
+            "description": "Direction",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "outsideAirTemp",
+            "description": "Outside air temperature",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "windDirection",
+            "description": "Win direction",
+            "schema": "double"
+        },
+        {
+            "@type": "Property",
+            "name": "windSpeed",
+            "description": "Wind speed",
+            "schema": "double"
+        }
+   ]
+}
