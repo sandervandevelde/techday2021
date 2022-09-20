@@ -18,10 +18,10 @@
         },
         {
             "@type": "Relationship",
-            "@id": "dtmi:com:adt:flightintoazure:airplane;1",
+            "@id": "dtmi:com:adt:flightintoazure:airliner_has_airplane;1",
             "name": "rel_has_airplanes",
             "displayName": "Has airplanes",
-            "target": "dtmi:com:adt:flightintoazure:airliner;1"
+            "target": "dtmi:com:adt:flightintoazure:airplane;1"
         }
     ]
 }

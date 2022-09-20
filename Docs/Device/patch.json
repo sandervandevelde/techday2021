@@ -1,0 +1,57 @@
+[
+    {
+        "op": "replace",
+        "path": "/lastCallsign",
+        "value": "AAW874"
+    },
+    {
+        "op": "replace",
+        "path": "/lastLatitude",
+        "value": 51.051086
+    },
+    {
+        "op": "replace",
+        "path": "/lastLongitude",
+        "value": 2.98791
+    },
+    {
+        "op": "replace",
+        "path": "/lastAltitude",
+        "value": 31325
+    },
+    {
+        "op": "replace",
+        "path": "/lastVSFPM",
+        "value": 1156
+    },
+    {
+        "op": "replace",
+        "path": "/lastSecondsLastReport",
+        "value": 61
+    },
+    {
+        "op": "replace",
+        "path": "/lastSpeed",
+        "value": 490
+    },
+    {
+        "op": "replace",
+        "path": "/lastDirection",
+        "value": 101
+    },
+    {
+        "op": "replace",
+        "path": "/lastOutsideAirTemp",
+        "value": -47.65
+    },
+    {
+        "op": "replace",
+        "path": "/lastWindDirection",
+        "value": 350
+    },
+    {
+        "op": "replace",
+        "path": "/lastWindSpeed",
+        "value": 32
+    }
+]

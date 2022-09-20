@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "messageType": "simulation",
+        "messageCount": "2"
+    },
+    "systemProperties": {
+        "iothub-content-type": "application/json",
+        "iothub-content-encoding": "utf-8",
+        "iothub-connection-device-id": "AAW874sim",
+        "iothub-connection-auth-method": "{\"scope\":\"device\",\"type\":\"sas\",\"issuer\":\"iothub\",\"acceptingIpFilterRule\":null}",
+        "iothub-connection-auth-generation-id": "637984218972246327",
+        "iothub-enqueuedtime": "2022-09-20T19:56:34.013Z",
+        "iothub-message-source": "Telemetry"
+    },
+    "body": {
+        "messageId": 3,
+        "deviceId": "AAW874",
+        "callsign": "AAW874",
+        "date": "04/10/2021",
+        "time": "11:21:42",
+        "dateTimeUtc": "2022-09-20T19:56:33.9696079Z",
+        "position": "\"51.473167;-0.485792\"",
+        "latitude": 51.473167,
+        "longitude": -0.485792,
+        "altitude": 0,
+        "vSFPM": 0,
+        "secondsLastReport": 13,
+        "speed": 2,
+        "direction": 270,
+        "outsideAirTemp": 15.0,
+        "windDirection": 250.0,
+        "windSpeed": 6
+    }
+}

@@ -1,16 +1,11 @@
 {
+    "@context": "dtmi:dtdl:context;2",
     "@id": "dtmi:com:adt:flightintoazure:airplane;1",
     "@type": "Interface",
-    "@context": "dtmi:dtdl:context;2",
     "displayName": "Airplane - Flight Into Azure - Interface Model",
     "contents": [
         {
             "@type": "Telemetry",
-            "name": "deviceId",
-            "schema": "string"
-        },
-        {
-            "@type": "Telemetry",
             "name": "callsign",
             "schema": "string"
         },
@@ -86,99 +81,112 @@
         },
         {
             "@type": "Property",
-            "name": "deviceId",
-            "description": "ID of device",
-            "schema": "string"
-        },
-        {
-            "@type": "Property",
-            "name": "callsign",
+            "name": "lastCallsign",
             "description": "Call sign",
-            "schema": "string"
+            "schema": "string",
+            "writable": true
         },
         {
             "@type": "Property",
-            "name": "date",
+            "name": "lastDate",
             "description": "Date",
-            "schema": "string"
+            "schema": "string",
+            "writable": true
         },
         {
             "@type": "Property",
-            "name": "time",
+            "name": "lastTime",
             "description": "Time",
-            "schema": "string"
+            "schema": "string",
+            "writable": true
         },        
         {
             "@type": "Property",
-            "name": "dateTimeUtc",
+            "name": "lastDateTimeUtc",
             "description": "Datetime UTC",
-            "schema": "dateTime"
+            "schema": "dateTime",
+            "writable": true
         },
         {
             "@type": "Property",
-            "name": "position",
+            "name": "lastPosition",
             "description": "Position",
-            "schema": "string"
+            "schema": "string",
+            "writable": true
         },        
         {
             "@type": "Property",
-            "name": "latitude",
+            "name": "lastLatitude",
             "description": "Latitude",
-            "schema": "double"
+            "schema": "double",
+            "writable": true
         },
         {
             "@type": "Property",
-            "name": "longitude",
+            "name": "lastLongitude",
             "description": "Longitude",
-            "schema": "double"
+            "schema": "double",
+            "writable": true
         },
         {
             "@type": "Property",
-            "name": "altitude",
+            "name": "lastAltitude",
             "description": "Altitude",
-            "schema": "double"
+            "schema": "double",
+            "writable": true
         },
         {
             "@type": "Property",
-            "name": "vSFPM",
+            "name": "lastVSFPM",
             "description": "Vertical speed in feet per minute",
-            "schema": "double"
+            "schema": "double",
+            "writable": true
         },
         {
             "@type": "Property",
-            "name": "secondsLastReport",
+            "name": "lastSecondsLastReport",
             "description": "Seconds to last report",
-            "schema": "double"
+            "schema": "double",
+            "writable": true
         },
         {
             "@type": "Property",
-            "name": "speed",
+            "name": "lastSpeed",
             "description": "Speed",
-            "schema": "double"
+            "schema": "double",
+            "writable": true
         },
         {
             "@type": "Property",
-            "name": "direction",
+            "name": "lastDirection",
             "description": "Direction",
-            "schema": "double"
+            "schema": "double",
+            "writable": true
         },
         {
-            "@type": "Property",
-            "name": "outsideAirTemp",
+            "@type": [
+                "Property",
+                "Temperature"
+            ],
+            "name": "lastOutsideAirTemp",
             "description": "Outside air temperature",
-            "schema": "double"
+            "schema": "double",
+            "unit": "degreeFahrenheit",
+            "writable": true
         },
         {
             "@type": "Property",
-            "name": "windDirection",
+            "name": "lastWindDirection",
             "description": "Win direction",
-            "schema": "double"
+            "schema": "double",
+            "writable": true
         },
         {
             "@type": "Property",
-            "name": "windSpeed",
+            "name": "lastWindSpeed",
             "description": "Wind speed",
-            "schema": "double"
+            "schema": "double",
+            "writable": true
         }
    ]
 }
